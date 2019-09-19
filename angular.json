@@ -2,5 +2,825 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "IndianaUniversity": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/IndianaUniversity",
+      "sourceRoot": "projects/IndianaUniversity/src",
+      "prefix": "iu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/IndianaUniversity",
+            "index": "projects/IndianaUniversity/src/index.html",
+            "main": "projects/IndianaUniversity/src/main.ts",
+            "polyfills": "projects/IndianaUniversity/src/polyfills.ts",
+            "tsConfig": "projects/IndianaUniversity/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/IndianaUniversity/src/favicon.ico",
+              "projects/IndianaUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/IndianaUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/IndianaUniversity/src/environments/environment.ts",
+                  "with": "projects/IndianaUniversity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "IndianaUniversity:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "IndianaUniversity:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "IndianaUniversity:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/IndianaUniversity/src/test.ts",
+            "polyfills": "projects/IndianaUniversity/src/polyfills.ts",
+            "tsConfig": "projects/IndianaUniversity/tsconfig.spec.json",
+            "karmaConfig": "projects/IndianaUniversity/karma.conf.js",
+            "assets": [
+              "projects/IndianaUniversity/src/favicon.ico",
+              "projects/IndianaUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/IndianaUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/IndianaUniversity/tsconfig.app.json",
+              "projects/IndianaUniversity/tsconfig.spec.json",
+              "projects/IndianaUniversity/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/IndianaUniversity/e2e/protractor.conf.js",
+            "devServerTarget": "IndianaUniversity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "IndianaUniversity:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "MichiganStateUniversity": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/MichiganStateUniversity",
+      "sourceRoot": "projects/MichiganStateUniversity/src",
+      "prefix": "msu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/MichiganStateUniversity",
+            "index": "projects/MichiganStateUniversity/src/index.html",
+            "main": "projects/MichiganStateUniversity/src/main.ts",
+            "polyfills": "projects/MichiganStateUniversity/src/polyfills.ts",
+            "tsConfig": "projects/MichiganStateUniversity/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/MichiganStateUniversity/src/favicon.ico",
+              "projects/MichiganStateUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/MichiganStateUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/MichiganStateUniversity/src/environments/environment.ts",
+                  "with": "projects/MichiganStateUniversity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "MichiganStateUniversity:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "MichiganStateUniversity:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "MichiganStateUniversity:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/MichiganStateUniversity/src/test.ts",
+            "polyfills": "projects/MichiganStateUniversity/src/polyfills.ts",
+            "tsConfig": "projects/MichiganStateUniversity/tsconfig.spec.json",
+            "karmaConfig": "projects/MichiganStateUniversity/karma.conf.js",
+            "assets": [
+              "projects/MichiganStateUniversity/src/favicon.ico",
+              "projects/MichiganStateUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/MichiganStateUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/MichiganStateUniversity/tsconfig.app.json",
+              "projects/MichiganStateUniversity/tsconfig.spec.json",
+              "projects/MichiganStateUniversity/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/MichiganStateUniversity/e2e/protractor.conf.js",
+            "devServerTarget": "MichiganStateUniversity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "MichiganStateUniversity:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "OhioStateUniversity": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/OhioStateUniversity",
+      "sourceRoot": "projects/OhioStateUniversity/src",
+      "prefix": "osu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/OhioStateUniversity",
+            "index": "projects/OhioStateUniversity/src/index.html",
+            "main": "projects/OhioStateUniversity/src/main.ts",
+            "polyfills": "projects/OhioStateUniversity/src/polyfills.ts",
+            "tsConfig": "projects/OhioStateUniversity/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/OhioStateUniversity/src/favicon.ico",
+              "projects/OhioStateUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/OhioStateUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/OhioStateUniversity/src/environments/environment.ts",
+                  "with": "projects/OhioStateUniversity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "OhioStateUniversity:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "OhioStateUniversity:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "OhioStateUniversity:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/OhioStateUniversity/src/test.ts",
+            "polyfills": "projects/OhioStateUniversity/src/polyfills.ts",
+            "tsConfig": "projects/OhioStateUniversity/tsconfig.spec.json",
+            "karmaConfig": "projects/OhioStateUniversity/karma.conf.js",
+            "assets": [
+              "projects/OhioStateUniversity/src/favicon.ico",
+              "projects/OhioStateUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/OhioStateUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/OhioStateUniversity/tsconfig.app.json",
+              "projects/OhioStateUniversity/tsconfig.spec.json",
+              "projects/OhioStateUniversity/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/OhioStateUniversity/e2e/protractor.conf.js",
+            "devServerTarget": "OhioStateUniversity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "OhioStateUniversity:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "UniversityOfMichigan": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/UniversityOfMichigan",
+      "sourceRoot": "projects/UniversityOfMichigan/src",
+      "prefix": "mich",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/UniversityOfMichigan",
+            "index": "projects/UniversityOfMichigan/src/index.html",
+            "main": "projects/UniversityOfMichigan/src/main.ts",
+            "polyfills": "projects/UniversityOfMichigan/src/polyfills.ts",
+            "tsConfig": "projects/UniversityOfMichigan/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/UniversityOfMichigan/src/favicon.ico",
+              "projects/UniversityOfMichigan/src/assets"
+            ],
+            "styles": [
+              "projects/UniversityOfMichigan/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/UniversityOfMichigan/src/environments/environment.ts",
+                  "with": "projects/UniversityOfMichigan/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "UniversityOfMichigan:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "UniversityOfMichigan:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "UniversityOfMichigan:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/UniversityOfMichigan/src/test.ts",
+            "polyfills": "projects/UniversityOfMichigan/src/polyfills.ts",
+            "tsConfig": "projects/UniversityOfMichigan/tsconfig.spec.json",
+            "karmaConfig": "projects/UniversityOfMichigan/karma.conf.js",
+            "assets": [
+              "projects/UniversityOfMichigan/src/favicon.ico",
+              "projects/UniversityOfMichigan/src/assets"
+            ],
+            "styles": [
+              "projects/UniversityOfMichigan/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/UniversityOfMichigan/tsconfig.app.json",
+              "projects/UniversityOfMichigan/tsconfig.spec.json",
+              "projects/UniversityOfMichigan/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/UniversityOfMichigan/e2e/protractor.conf.js",
+            "devServerTarget": "UniversityOfMichigan:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "UniversityOfMichigan:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "MarylandUniversity": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/MarylandUniversity",
+      "sourceRoot": "projects/MarylandUniversity/src",
+      "prefix": "md",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/MarylandUniversity",
+            "index": "projects/MarylandUniversity/src/index.html",
+            "main": "projects/MarylandUniversity/src/main.ts",
+            "polyfills": "projects/MarylandUniversity/src/polyfills.ts",
+            "tsConfig": "projects/MarylandUniversity/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/MarylandUniversity/src/favicon.ico",
+              "projects/MarylandUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/MarylandUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/MarylandUniversity/src/environments/environment.ts",
+                  "with": "projects/MarylandUniversity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "MarylandUniversity:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "MarylandUniversity:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "MarylandUniversity:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/MarylandUniversity/src/test.ts",
+            "polyfills": "projects/MarylandUniversity/src/polyfills.ts",
+            "tsConfig": "projects/MarylandUniversity/tsconfig.spec.json",
+            "karmaConfig": "projects/MarylandUniversity/karma.conf.js",
+            "assets": [
+              "projects/MarylandUniversity/src/favicon.ico",
+              "projects/MarylandUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/MarylandUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/MarylandUniversity/tsconfig.app.json",
+              "projects/MarylandUniversity/tsconfig.spec.json",
+              "projects/MarylandUniversity/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/MarylandUniversity/e2e/protractor.conf.js",
+            "devServerTarget": "MarylandUniversity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "MarylandUniversity:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "PennStateUniversity": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/PennStateUniversity",
+      "sourceRoot": "projects/PennStateUniversity/src",
+      "prefix": "psu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/PennStateUniversity",
+            "index": "projects/PennStateUniversity/src/index.html",
+            "main": "projects/PennStateUniversity/src/main.ts",
+            "polyfills": "projects/PennStateUniversity/src/polyfills.ts",
+            "tsConfig": "projects/PennStateUniversity/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/PennStateUniversity/src/favicon.ico",
+              "projects/PennStateUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/PennStateUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/PennStateUniversity/src/environments/environment.ts",
+                  "with": "projects/PennStateUniversity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "PennStateUniversity:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "PennStateUniversity:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "PennStateUniversity:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/PennStateUniversity/src/test.ts",
+            "polyfills": "projects/PennStateUniversity/src/polyfills.ts",
+            "tsConfig": "projects/PennStateUniversity/tsconfig.spec.json",
+            "karmaConfig": "projects/PennStateUniversity/karma.conf.js",
+            "assets": [
+              "projects/PennStateUniversity/src/favicon.ico",
+              "projects/PennStateUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/PennStateUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/PennStateUniversity/tsconfig.app.json",
+              "projects/PennStateUniversity/tsconfig.spec.json",
+              "projects/PennStateUniversity/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/PennStateUniversity/e2e/protractor.conf.js",
+            "devServerTarget": "PennStateUniversity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "PennStateUniversity:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "RutgersUniversity": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/RutgersUniversity",
+      "sourceRoot": "projects/RutgersUniversity/src",
+      "prefix": "rutg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/RutgersUniversity",
+            "index": "projects/RutgersUniversity/src/index.html",
+            "main": "projects/RutgersUniversity/src/main.ts",
+            "polyfills": "projects/RutgersUniversity/src/polyfills.ts",
+            "tsConfig": "projects/RutgersUniversity/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/RutgersUniversity/src/favicon.ico",
+              "projects/RutgersUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/RutgersUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/RutgersUniversity/src/environments/environment.ts",
+                  "with": "projects/RutgersUniversity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "RutgersUniversity:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "RutgersUniversity:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "RutgersUniversity:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/RutgersUniversity/src/test.ts",
+            "polyfills": "projects/RutgersUniversity/src/polyfills.ts",
+            "tsConfig": "projects/RutgersUniversity/tsconfig.spec.json",
+            "karmaConfig": "projects/RutgersUniversity/karma.conf.js",
+            "assets": [
+              "projects/RutgersUniversity/src/favicon.ico",
+              "projects/RutgersUniversity/src/assets"
+            ],
+            "styles": [
+              "projects/RutgersUniversity/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/RutgersUniversity/tsconfig.app.json",
+              "projects/RutgersUniversity/tsconfig.spec.json",
+              "projects/RutgersUniversity/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/RutgersUniversity/e2e/protractor.conf.js",
+            "devServerTarget": "RutgersUniversity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "RutgersUniversity:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "IndianaUniversity"
 }
