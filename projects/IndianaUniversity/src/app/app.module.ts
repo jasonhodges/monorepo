@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LibHeaderConfig, LibHeaderModule } from 'lib-header';
+import { LibPlayerCardModule } from 'lib-player-card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,10 @@ const libHeaderConfig: LibHeaderConfig = {
   title: 'Indiana University Football'
 };
 
+const libPlayerCardConfig = {
+  school: 'Indiana'
+};
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,9 +25,11 @@ const libHeaderConfig: LibHeaderConfig = {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LibHeaderModule.forRoot(libHeaderConfig)
+    LibHeaderModule.forRoot(libHeaderConfig),
+    LibPlayerCardModule.forRoot(libPlayerCardConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

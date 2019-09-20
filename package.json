@@ -22,6 +22,7 @@
     "build:MICH": "ng build UniversityOfMichigan",
     "build-libs": "npm-run-all build:lib-*",
     "build:lib-header": "ng build lib-header",
+    "build:lib-player-card": "ng build lib-player-card",
     "test": "npm-run-all -p test:* -c",
     "test:IU": "ng test IndianaUniversity",
     "test:MU": "ng test MarylandUniversity",
@@ -32,6 +33,7 @@
     "test:MICH": "ng test UniversityOfMichigan",
     "watch-libs": "npm-run-all --parallel watch:lib*",
     "watch:lib-header": "ng build lib-header --watch",
+    "watch:lib-player-card": "ng build lib-player-card --watch",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

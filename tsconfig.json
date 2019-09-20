@@ -24,6 +24,12 @@
       ],
       "lib-header/*": [
         "dist/lib-header/*"
+      ],
+      "lib-player-card": [
+        "dist/lib-player-card"
+      ],
+      "lib-player-card/*": [
+        "dist/lib-player-card/*"
       ]
     }
   },
