@@ -74,3 +74,12 @@ jobs:
             - dist
       - store_artifacts:
           path: dist
+
+workflows:
+  version: 2
+  pr_check:
+    jobs:
+      - install
+      - build:
+          requires:
+            - install
