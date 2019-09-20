@@ -1,0 +1,12 @@
+@import "../../../shared/styles/typography";
+.header {
+  &-toolbar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+}
+img {
+  height: 60px;
+  margin-right: 12px;
+}

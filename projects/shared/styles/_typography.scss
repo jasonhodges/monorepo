@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Patua One', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+}
+
+.header {
+  &-school {
+    font-family: 'Patua One';
+    font-size: 42px;
+  }
+}
