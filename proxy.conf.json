@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://api.collegefootballdata.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "debug"
+  }
+}

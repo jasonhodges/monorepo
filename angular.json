@@ -28,6 +28,7 @@
               "projects/IndianaUniversity/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/IndianaUniversity/src/styles.scss"
             ],
             "scripts": []
@@ -62,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "IndianaUniversity:build"
+            "browserTarget": "IndianaUniversity:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -88,6 +90,7 @@
               "projects/IndianaUniversity/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/IndianaUniversity/src/styles.scss"
             ],
             "scripts": []
@@ -179,7 +182,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MichiganStateUniversity:build"
+            "browserTarget": "MichiganStateUniversity:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -296,7 +300,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "OhioStateUniversity:build"
+            "browserTarget": "OhioStateUniversity:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -413,7 +418,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "UniversityOfMichigan:build"
+            "browserTarget": "UniversityOfMichigan:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -530,7 +536,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MarylandUniversity:build"
+            "browserTarget": "MarylandUniversity:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -647,7 +654,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PennStateUniversity:build"
+            "browserTarget": "PennStateUniversity:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -764,7 +772,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "RutgersUniversity:build"
+            "browserTarget": "RutgersUniversity:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -821,6 +830,42 @@
           }
         }
       }
-    }},
+    },
+    "lib-header": {
+      "projectType": "library",
+      "root": "projects/lib-header",
+      "sourceRoot": "projects/lib-header/src",
+      "prefix": "ui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-header/tsconfig.lib.json",
+            "project": "projects/lib-header/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-header/src/test.ts",
+            "tsConfig": "projects/lib-header/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-header/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-header/tsconfig.lib.json",
+              "projects/lib-header/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "IndianaUniversity"
 }
