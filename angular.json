@@ -120,6 +120,14 @@
               "devServerTarget": "IndianaUniversity:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/IndianaUniversity",
+            "netlifyToken": "",
+            "siteId": "f138cf65-83a5-4858-8428-544383b51e27"
+          }
         }
       }
     },
@@ -473,6 +481,14 @@
             "production": {
               "devServerTarget": "UniversityOfMichigan:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/UniversityOfMichigan",
+            "netlifyToken": "",
+            "siteId": "7602a1a5-97e1-4b6e-becb-dc206cf09e11"
           }
         }
       }

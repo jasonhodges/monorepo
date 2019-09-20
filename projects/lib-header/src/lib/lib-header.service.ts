@@ -14,9 +14,7 @@ enum apiConfig {
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json',
     Accept: 'application/json',
-    'Access-Control-Allow-Origin': '*',
   })
 };
 
