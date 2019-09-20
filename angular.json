@@ -865,6 +865,41 @@
           }
         }
       }
+    },
+    "lib-player-card": {
+      "projectType": "library",
+      "root": "projects/lib-player-card",
+      "sourceRoot": "projects/lib-player-card/src",
+      "prefix": "ui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-player-card/tsconfig.lib.json",
+            "project": "projects/lib-player-card/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-player-card/src/test.ts",
+            "tsConfig": "projects/lib-player-card/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-player-card/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-player-card/tsconfig.lib.json",
+              "projects/lib-player-card/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "IndianaUniversity"
