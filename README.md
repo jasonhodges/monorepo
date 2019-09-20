@@ -30,6 +30,6 @@ The package.json file has been modified to allow for building the newly added li
 
 The lib-header ui component utilizes its own service to make an api call in order to get information about each team. Config is included in proxy.conf.json and supplied to each application within angular.json under serve > options > proxyConfig. This allows each application to properly call the api via the header while being served for local development.
 
-A shared directory has been added under the projects directory. Within this directory are folders for images, models, and styles as well as a material.module for bringing in Angular Material components. 
+A shared directory has been added under the projects directory. Within this directory are folders for images, models, and styles as well as a material.module for bringing in Angular Material components (for demo style). 
 
 Each application is using the lib-header. Within each application module file, a set of values is being passed to the LibHeaderModule via .forRoot. This is what customizes the header for each application. The values are passed to the lib-header and then lib-header uses the values to filter the response from the api call. 
