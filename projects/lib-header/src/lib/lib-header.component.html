@@ -1,5 +1,5 @@
 <ng-container *ngIf="team | async as team">
-  <mat-toolbar [style.background]="team.color" class="header header-toolbar">
+  <mat-toolbar [style.background]="team.alt_color" class="header header-toolbar">
     <img src="{{team.logos[1]}}" alt="{{team.school}} logo">
     <span class="header header-school" [style.color]="team.alt_color">{{(config | async).title}}</span>
   </mat-toolbar>
