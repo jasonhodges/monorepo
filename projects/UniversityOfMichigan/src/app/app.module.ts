@@ -10,24 +10,22 @@ import { AppComponent } from './app.component';
 const libHeaderConfig: LibHeaderConfig = {
   conference: 'B1G',
   abbreviation: 'MICH',
-  title: 'University Of Michigan Football'
+  title: 'University Of Michigan Football',
 };
 
 const libPlayerCardConfig = {
-  school: 'Michigan'
+  school: 'Michigan',
 };
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LibHeaderModule.forRoot(libHeaderConfig),
-    LibPlayerCardModule.forRoot(libPlayerCardConfig)
+    LibPlayerCardModule.forRoot(libPlayerCardConfig),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

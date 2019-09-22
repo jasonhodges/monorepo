@@ -38,7 +38,8 @@
     "deploy:IU": "NETLIFY_TOKEN=$monorepo_01_netlify ng run IndianaUniversity:deploy",
     "deploy:MICH": "NETLIFY_TOKEN=$monorepo_01_netlify ng run UniversityOfMichigan:deploy",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prettier:write": "prettier --config ./.prettierrc --list-different \"projects/*/{src/app,src/environments,src/assets}/**/*{.ts,.js,.json,.css,.scss}\" --write"
   },
   "private": true,
   "dependencies": {
@@ -77,6 +78,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "ng-packagr": "^5.1.0",
+    "prettier": "^1.18.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tsickle": "^0.35.0",
