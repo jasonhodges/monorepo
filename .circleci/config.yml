@@ -156,19 +156,19 @@ workflows:
             - install
       - build-IU:
           requires:
-#            - install
-            - build-libs
+            - install
+            - build-LIBS
       - build-MICH:
           requires:
-#            - install
-            - build-libs
+            - install
+            - build-LIBS
       - deploy-IU:
           requires:
-            - build-libs
+            - build-LIBS
             - build-IU
       - deploy-MICH:
           requires:
-            - build-libs
+            - build-LIBS
             - build-MICH
 #          filters:
 #            branches:
