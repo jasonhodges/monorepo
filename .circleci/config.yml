@@ -59,7 +59,7 @@ jobs:
           paths:
             - ~/.cache
             - node_modules
-  build-libs:
+  build-LIBS:
     <<: *defaults
     steps:
       - checkout
@@ -67,7 +67,7 @@ jobs:
           <<: *yarn_cache
       - run: yarn build-libs
       - save_cache:
-          key: build_libs-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          key: build_LIBS-{{ .Environment.CIRCLE_WORKFLOW_ID }}
           paths:
             - dist
       - store_artifacts:
@@ -151,17 +151,17 @@ workflows:
   pr_check:
     jobs:
       - install
-      - build-libs
+      - build-LIBS
           requires:
             - install
       - build-IU:
           requires:
+#            - install
             - build-libs
-            - install
       - build-MICH:
           requires:
+#            - install
             - build-libs
-            - install
       - deploy-IU:
           requires:
             - build-libs
