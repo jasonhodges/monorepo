@@ -72,6 +72,10 @@ jobs:
             - dist
       - store_artifacts:
           path: dist
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
   build-IU:
     <<: *defaults
     name: Build IU
@@ -83,6 +87,8 @@ jobs:
           <<: *set_env
       - restore_cache:
           <<: *yarn_cache
+      - attach_workspace:
+          at: .
       - run: yarn build:IU
       - save_cache:
           key: build_IU-{{ .Environment.CIRCLE_WORKFLOW_ID }}
