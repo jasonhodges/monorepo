@@ -151,7 +151,7 @@ workflows:
   pr_check:
     jobs:
       - install
-      - build-LIBS
+      - build-LIBS:
           requires:
             - install
       - build-IU:
