@@ -59,6 +59,19 @@ jobs:
           paths:
             - ~/.cache
             - node_modules
+  build-libs:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *yarn_cache
+      - run: yarn build-libs
+      - save_cache:
+          key: build_libs-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          paths:
+            - dist
+      - store_artifacts:
+          path: dist
   build-IU:
     <<: *defaults
     name: Build IU
@@ -138,17 +151,24 @@ workflows:
   pr_check:
     jobs:
       - install
+      - build-libs
+          requires:
+            - install
       - build-IU:
           requires:
+            - build-libs
             - install
       - build-MICH:
           requires:
+            - build-libs
             - install
       - deploy-IU:
           requires:
+            - build-libs
             - build-IU
       - deploy-MICH:
           requires:
+            - build-libs
             - build-MICH
 #          filters:
 #            branches:
