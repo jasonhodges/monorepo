@@ -22,7 +22,7 @@
     "build:MICH": "ng build UniversityOfMichigan --progress=false",
     "build-libs": "npm-run-all build-lib:lib-*",
     "build-lib:lib-header": "ng build lib-header",
-    "build:lib-player-card": "ng build lib-player-card",
+    "build-lib:lib-player-card": "ng build lib-player-card",
     "test": "npm-run-all --parallel test:* -c",
     "test:IU": "ng test IndianaUniversity",
     "test:MU": "ng test MarylandUniversity",

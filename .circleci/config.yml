@@ -126,6 +126,8 @@ jobs:
           <<: *set_env
       - restore_cache:
           <<: *yarn_cache
+      - attach_workspace:
+          at: .
       - run: yarn build:MICH
       - save_cache:
           key: build_MICH-{{ .Environment.CIRCLE_WORKFLOW_ID }}
