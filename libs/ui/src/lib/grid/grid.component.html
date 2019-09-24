@@ -1,0 +1,5 @@
+<div class="grid grid-container">
+  <ng-container *ngFor="let player of roster | async">
+    <monorepo-player-card class="player-card" [player]="player"></monorepo-player-card>
+  </ng-container>
+</div>

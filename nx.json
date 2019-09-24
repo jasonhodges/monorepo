@@ -1,0 +1,54 @@
+{
+  "npmScope": "monorepo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "IndianaUniversity": {
+      "tags": []
+    },
+    "MarylandUniversity": {
+      "tags": []
+    },
+    "MichiganStateUniversity": {
+      "tags": []
+    },
+    "OhioStateUniversity": {
+      "tags": []
+    },
+    "PennStateUniversity": {
+      "tags": []
+    },
+    "RutgersUniversity": {
+      "tags": []
+    },
+    "UniversityOfIllinois": {
+      "tags": []
+    },
+    "UniversityOfMichigan": {
+      "tags": []
+    },
+    "lib-header": {
+      "tags": []
+    },
+    "lib-player-card": {
+      "tags": []
+    },
+    "lib-footer": {
+      "tags": []
+    },
+    "data": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    }
+  }
+}

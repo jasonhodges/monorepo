@@ -1,3 +1,6 @@
+import { TeamConfig } from './team.config';
+
 export const environment = {
-  production: true
+  production: true,
+  config: TeamConfig
 };
