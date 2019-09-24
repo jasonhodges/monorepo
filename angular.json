@@ -1,7 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
   "projects": {
     "IndianaUniversity": {
       "projectType": "application",
@@ -23,10 +22,7 @@
             "polyfills": "projects/IndianaUniversity/src/polyfills.ts",
             "tsConfig": "projects/IndianaUniversity/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/IndianaUniversity/src/favicon.ico",
-              "projects/IndianaUniversity/src/assets"
-            ],
+            "assets": ["projects/IndianaUniversity/src/favicon.ico", "projects/IndianaUniversity/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/IndianaUniversity/src/styles.scss"
@@ -85,10 +81,7 @@
             "polyfills": "projects/IndianaUniversity/src/polyfills.ts",
             "tsConfig": "projects/IndianaUniversity/tsconfig.spec.json",
             "karmaConfig": "projects/IndianaUniversity/karma.conf.js",
-            "assets": [
-              "projects/IndianaUniversity/src/favicon.ico",
-              "projects/IndianaUniversity/src/assets"
-            ],
+            "assets": ["projects/IndianaUniversity/src/favicon.ico", "projects/IndianaUniversity/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/IndianaUniversity/src/styles.scss"
@@ -104,9 +97,7 @@
               "projects/IndianaUniversity/tsconfig.spec.json",
               "projects/IndianaUniversity/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -155,9 +146,7 @@
               "projects/MichiganStateUniversity/src/favicon.ico",
               "projects/MichiganStateUniversity/src/assets"
             ],
-            "styles": [
-              "projects/MichiganStateUniversity/src/styles.scss"
-            ],
+            "styles": ["projects/MichiganStateUniversity/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -216,9 +205,7 @@
               "projects/MichiganStateUniversity/src/favicon.ico",
               "projects/MichiganStateUniversity/src/assets"
             ],
-            "styles": [
-              "projects/MichiganStateUniversity/src/styles.scss"
-            ],
+            "styles": ["projects/MichiganStateUniversity/src/styles.scss"],
             "scripts": []
           }
         },
@@ -230,9 +217,7 @@
               "projects/MichiganStateUniversity/tsconfig.spec.json",
               "projects/MichiganStateUniversity/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -269,13 +254,8 @@
             "polyfills": "projects/OhioStateUniversity/src/polyfills.ts",
             "tsConfig": "projects/OhioStateUniversity/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/OhioStateUniversity/src/favicon.ico",
-              "projects/OhioStateUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/OhioStateUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/OhioStateUniversity/src/favicon.ico", "projects/OhioStateUniversity/src/assets"],
+            "styles": ["projects/OhioStateUniversity/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -330,13 +310,8 @@
             "polyfills": "projects/OhioStateUniversity/src/polyfills.ts",
             "tsConfig": "projects/OhioStateUniversity/tsconfig.spec.json",
             "karmaConfig": "projects/OhioStateUniversity/karma.conf.js",
-            "assets": [
-              "projects/OhioStateUniversity/src/favicon.ico",
-              "projects/OhioStateUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/OhioStateUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/OhioStateUniversity/src/favicon.ico", "projects/OhioStateUniversity/src/assets"],
+            "styles": ["projects/OhioStateUniversity/src/styles.scss"],
             "scripts": []
           }
         },
@@ -348,9 +323,7 @@
               "projects/OhioStateUniversity/tsconfig.spec.json",
               "projects/OhioStateUniversity/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -387,13 +360,8 @@
             "polyfills": "projects/UniversityOfMichigan/src/polyfills.ts",
             "tsConfig": "projects/UniversityOfMichigan/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/UniversityOfMichigan/src/favicon.ico",
-              "projects/UniversityOfMichigan/src/assets"
-            ],
-            "styles": [
-              "projects/UniversityOfMichigan/src/styles.scss"
-            ],
+            "assets": ["projects/UniversityOfMichigan/src/favicon.ico", "projects/UniversityOfMichigan/src/assets"],
+            "styles": ["projects/UniversityOfMichigan/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -448,13 +416,8 @@
             "polyfills": "projects/UniversityOfMichigan/src/polyfills.ts",
             "tsConfig": "projects/UniversityOfMichigan/tsconfig.spec.json",
             "karmaConfig": "projects/UniversityOfMichigan/karma.conf.js",
-            "assets": [
-              "projects/UniversityOfMichigan/src/favicon.ico",
-              "projects/UniversityOfMichigan/src/assets"
-            ],
-            "styles": [
-              "projects/UniversityOfMichigan/src/styles.scss"
-            ],
+            "assets": ["projects/UniversityOfMichigan/src/favicon.ico", "projects/UniversityOfMichigan/src/assets"],
+            "styles": ["projects/UniversityOfMichigan/src/styles.scss"],
             "scripts": []
           }
         },
@@ -466,9 +429,7 @@
               "projects/UniversityOfMichigan/tsconfig.spec.json",
               "projects/UniversityOfMichigan/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -513,13 +474,8 @@
             "polyfills": "projects/MarylandUniversity/src/polyfills.ts",
             "tsConfig": "projects/MarylandUniversity/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/MarylandUniversity/src/favicon.ico",
-              "projects/MarylandUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/MarylandUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/MarylandUniversity/src/favicon.ico", "projects/MarylandUniversity/src/assets"],
+            "styles": ["projects/MarylandUniversity/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -574,13 +530,8 @@
             "polyfills": "projects/MarylandUniversity/src/polyfills.ts",
             "tsConfig": "projects/MarylandUniversity/tsconfig.spec.json",
             "karmaConfig": "projects/MarylandUniversity/karma.conf.js",
-            "assets": [
-              "projects/MarylandUniversity/src/favicon.ico",
-              "projects/MarylandUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/MarylandUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/MarylandUniversity/src/favicon.ico", "projects/MarylandUniversity/src/assets"],
+            "styles": ["projects/MarylandUniversity/src/styles.scss"],
             "scripts": []
           }
         },
@@ -592,9 +543,7 @@
               "projects/MarylandUniversity/tsconfig.spec.json",
               "projects/MarylandUniversity/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -631,13 +580,8 @@
             "polyfills": "projects/PennStateUniversity/src/polyfills.ts",
             "tsConfig": "projects/PennStateUniversity/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/PennStateUniversity/src/favicon.ico",
-              "projects/PennStateUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/PennStateUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/PennStateUniversity/src/favicon.ico", "projects/PennStateUniversity/src/assets"],
+            "styles": ["projects/PennStateUniversity/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -692,13 +636,8 @@
             "polyfills": "projects/PennStateUniversity/src/polyfills.ts",
             "tsConfig": "projects/PennStateUniversity/tsconfig.spec.json",
             "karmaConfig": "projects/PennStateUniversity/karma.conf.js",
-            "assets": [
-              "projects/PennStateUniversity/src/favicon.ico",
-              "projects/PennStateUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/PennStateUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/PennStateUniversity/src/favicon.ico", "projects/PennStateUniversity/src/assets"],
+            "styles": ["projects/PennStateUniversity/src/styles.scss"],
             "scripts": []
           }
         },
@@ -710,9 +649,7 @@
               "projects/PennStateUniversity/tsconfig.spec.json",
               "projects/PennStateUniversity/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -749,13 +686,8 @@
             "polyfills": "projects/RutgersUniversity/src/polyfills.ts",
             "tsConfig": "projects/RutgersUniversity/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/RutgersUniversity/src/favicon.ico",
-              "projects/RutgersUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/RutgersUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/RutgersUniversity/src/favicon.ico", "projects/RutgersUniversity/src/assets"],
+            "styles": ["projects/RutgersUniversity/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -810,13 +742,8 @@
             "polyfills": "projects/RutgersUniversity/src/polyfills.ts",
             "tsConfig": "projects/RutgersUniversity/tsconfig.spec.json",
             "karmaConfig": "projects/RutgersUniversity/karma.conf.js",
-            "assets": [
-              "projects/RutgersUniversity/src/favicon.ico",
-              "projects/RutgersUniversity/src/assets"
-            ],
-            "styles": [
-              "projects/RutgersUniversity/src/styles.scss"
-            ],
+            "assets": ["projects/RutgersUniversity/src/favicon.ico", "projects/RutgersUniversity/src/assets"],
+            "styles": ["projects/RutgersUniversity/src/styles.scss"],
             "scripts": []
           }
         },
@@ -828,9 +755,7 @@
               "projects/RutgersUniversity/tsconfig.spec.json",
               "projects/RutgersUniversity/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -871,13 +796,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/lib-header/tsconfig.lib.json",
-              "projects/lib-header/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/lib-header/tsconfig.lib.json", "projects/lib-header/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -906,13 +826,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/lib-player-card/tsconfig.lib.json",
-              "projects/lib-player-card/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/lib-player-card/tsconfig.lib.json", "projects/lib-player-card/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -941,13 +856,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/lib-footer/tsconfig.lib.json",
-              "projects/lib-footer/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/lib-footer/tsconfig.lib.json", "projects/lib-footer/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -972,13 +882,8 @@
             "polyfills": "projects/UniversityOfIllinois/src/polyfills.ts",
             "tsConfig": "projects/UniversityOfIllinois/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/UniversityOfIllinois/src/favicon.ico",
-              "projects/UniversityOfIllinois/src/assets"
-            ],
-            "styles": [
-              "projects/UniversityOfIllinois/src/styles.scss"
-            ],
+            "assets": ["projects/UniversityOfIllinois/src/favicon.ico", "projects/UniversityOfIllinois/src/assets"],
+            "styles": ["projects/UniversityOfIllinois/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -1032,13 +937,8 @@
             "polyfills": "projects/UniversityOfIllinois/src/polyfills.ts",
             "tsConfig": "projects/UniversityOfIllinois/tsconfig.spec.json",
             "karmaConfig": "projects/UniversityOfIllinois/karma.conf.js",
-            "assets": [
-              "projects/UniversityOfIllinois/src/favicon.ico",
-              "projects/UniversityOfIllinois/src/assets"
-            ],
-            "styles": [
-              "projects/UniversityOfIllinois/src/styles.scss"
-            ],
+            "assets": ["projects/UniversityOfIllinois/src/favicon.ico", "projects/UniversityOfIllinois/src/assets"],
+            "styles": ["projects/UniversityOfIllinois/src/styles.scss"],
             "scripts": []
           }
         },
@@ -1050,9 +950,7 @@
               "projects/UniversityOfIllinois/tsconfig.spec.json",
               "projects/UniversityOfIllinois/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -1068,6 +966,68 @@
           }
         }
       }
+    },
+    "data": {
+      "root": "libs/data",
+      "sourceRoot": "libs/data/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/data/tsconfig.lib.json", "libs/data/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/data/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data/jest.config.js",
+            "tsConfig": "libs/data/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "monorepo",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/ui/tsconfig.lib.json", "libs/ui/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "tsConfig": "libs/ui/tsconfig.spec.json",
+            "setupFile": "libs/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
     }
   },
   "defaultProject": "IndianaUniversity"
