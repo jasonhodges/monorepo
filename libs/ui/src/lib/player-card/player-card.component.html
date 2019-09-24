@@ -1,0 +1,23 @@
+<mat-card class="player-card">
+  <mat-card-header>
+    <!--        <div mat-card-avatar class="example-header-image"></div>-->
+    <mat-card-title>{{player.first_name}} {{player.last_name}}</mat-card-title>
+    <mat-card-subtitle>{{player.position}}</mat-card-subtitle>
+  </mat-card-header>
+  <!--      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+  <mat-card-content>
+    <ul>
+      <li>Height: {{player.height}}</li>
+      <li>Weight: {{player.weight}}</li>
+      <li>Jersey: {{player.jersey}}</li>
+      <li>Year: {{player.year}}</li>
+      <li>City: {{player.home_city}}</li>
+      <li>State: {{player.home_state}}</li>
+      <li>Country: {{player.home_country}}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

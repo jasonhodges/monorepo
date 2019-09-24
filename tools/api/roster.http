@@ -7,5 +7,7 @@
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
 # curl -X GET "https://api.collegefootballdata.com/roster?team=Indiana" -H "accept: application/json"
-GET https://api.collegefootballdata.com/roster?team=Indiana
+GET https://api.collegefootballdata.com/roster?team=Illinois
 accept: application/json
+
+###

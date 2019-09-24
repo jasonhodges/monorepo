@@ -33,3 +33,7 @@ export interface Player {
   home_state:	string;
   home_country:	string;
 }
+
+export interface PlayerCardConfig {
+  school: string;
+}

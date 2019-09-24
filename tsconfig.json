@@ -21,11 +21,12 @@
       "lib-footer": ["dist/lib-footer"],
       "lib-footer/*": ["dist/lib-footer/*"],
       "@monorepo/data": ["libs/data/src/index.ts"],
-      "@monorepo/ui": ["libs/ui/src/index.ts"]
+      "@monorepo/ui": ["libs/ui/src/index.ts"],
+      "@monorepo/api": ["libs/api/src/index.ts"],
+      "@monorepo/*": ["./"],
+      "@shared/*": ["projects/shared/*"],
+      "~monorepo/theme": ["projects/shared/styles/theme.scss"]
     }
   },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+  "exclude": ["node_modules", "tmp"]
 }
