@@ -30,6 +30,12 @@
       ],
       "lib-player-card/*": [
         "dist/lib-player-card/*"
+      ],
+      "lib-footer": [
+        "dist/lib-footer"
+      ],
+      "lib-footer/*": [
+        "dist/lib-footer/*"
       ]
     }
   },

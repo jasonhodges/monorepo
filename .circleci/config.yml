@@ -8,6 +8,8 @@ defaults: &defaults
   working_directory: ~/repo
   docker:
     - image: circleci/node:12-browsers
+  environment:
+    NETLIFY_TOKEN: $monorepo_01_netlify
 
 set_env: &set_env
   name: Setup Environment Variables
@@ -57,8 +59,26 @@ jobs:
           paths:
             - ~/.cache
             - node_modules
-  build:
+  build-LIBS:
     <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *yarn_cache
+      - run: yarn build-libs
+      - save_cache:
+          key: build_LIBS-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          paths:
+            - dist
+      - store_artifacts:
+          path: dist
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+  build-IU:
+    <<: *defaults
+    name: Build IU
     steps:
       - checkout
       - restore_cache:
@@ -67,10 +87,99 @@ jobs:
           <<: *set_env
       - restore_cache:
           <<: *yarn_cache
-      - run: yarn build
+      - attach_workspace:
+          at: .
+      - run: yarn build:IU
       - save_cache:
-          key: build-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          key: build_IU-{{ .Environment.CIRCLE_WORKFLOW_ID }}
           paths:
             - dist
       - store_artifacts:
           path: dist
+  deploy-IU:
+    <<: *defaults
+    name: Deploy IU
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *yarn_cache
+      - restore_cache:
+          key: build_IU-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+      - run: yarn deploy-sites
+      - run: git rev-parse HEAD > dist/last-deploy.txt
+      - save_cache:
+          key: last-deploy-sha
+          paths:
+            - dist/last-deploy.txt
+  build-MICH:
+    <<: *defaults
+    name: Build MICH
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *yarn_cache
+      - attach_workspace:
+          at: .
+      - run: yarn build:MICH
+      - save_cache:
+          key: build_MICH-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+          paths:
+            - dist
+      - store_artifacts:
+          path: dist
+  deploy-MICH:
+    <<: *defaults
+    name: Deploy MICH
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *deploy_cache
+      - run:
+          <<: *set_env
+      - restore_cache:
+          <<: *yarn_cache
+      - restore_cache:
+          key: build_MICH-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+      - run: yarn deploy-sites
+      - run: git rev-parse HEAD > dist/last-deploy.txt
+      - save_cache:
+          key: last-deploy-sha
+          paths:
+            - dist/last-deploy.txt
+workflows:
+  version: 2
+  pr_check:
+    jobs:
+      - install
+      - build-LIBS:
+          requires:
+            - install
+      - build-IU:
+          requires:
+            - install
+            - build-LIBS
+      - build-MICH:
+          requires:
+            - install
+            - build-LIBS
+      - deploy-IU:
+          requires:
+            - build-LIBS
+            - build-IU
+      - deploy-MICH:
+          requires:
+            - build-LIBS
+            - build-MICH
+#          filters:
+#            branches:
+#              only:
+#                - master
+
